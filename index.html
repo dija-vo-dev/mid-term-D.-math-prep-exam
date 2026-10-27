@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAT2033 Discrete Math - Practice Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📘 MAT2033 Discrete Mathematics</h1>
+                <p class="subtitle">Practice Hub — Master Your Exam</p>
+            </div>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="score-label">Score</span>
+                    <span class="score-value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Streak</span>
+                    <span class="score-value" id="streak">0 🔥</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Accuracy</span>
+                    <span class="score-value" id="accuracy">0%</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Topic Navigation -->
+        <nav class="topic-nav">
+            <button class="topic-btn active" data-topic="all">📚 All Topics</button>
+            <button class="topic-btn" data-topic="logic">🔣 Logic</button>
+            <button class="topic-btn" data-topic="quantifiers">∀∃ Quantifiers</button>
+            <button class="topic-btn" data-topic="proofs">✍️ Proofs</button>
+            <button class="topic-btn" data-topic="sets">📦 Sets</button>
+            <button class="topic-btn" data-topic="functions">🔗 Functions</button>
+            <button class="topic-btn" data-topic="relations">🔁 Relations</button>
+            <button class="topic-btn" data-topic="numbers">🔢 Numbers</button>
+            <button class="topic-btn" data-topic="crypto">🔐 Crypto</button>
+            <button class="topic-btn" data-topic="graphs">📊 Graphs</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="progressText">Question 1 of 1</span>
+                    <button class="reset-btn" id="resetBtn">🔄 Reset Progress</button>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="question-card" id="questionCard">
+                <div class="question-header">
+                    <span class="question-topic" id="questionTopic">Topic</span>
+                    <span class="question-number" id="questionNumber">#1</span>
+                </div>
+                <div class="question-body">
+                    <p class="question-text" id="questionText">Loading question...</p>
+                </div>
+                <div class="options-container" id="optionsContainer">
+                    <!-- Options will be injected here -->
+                </div>
+                <div class="action-bar">
+                    <button class="btn btn-hint" id="hintBtn">💡 Hint</button>
+                    <button class="btn btn-check" id="checkBtn">Check Answer</button>
+                    <button class="btn btn-next" id="nextBtn" disabled>Next →</button>
+                </div>
+                <div class="hint-box hidden" id="hintBox">
+                    <strong>💡 Hint:</strong> <span id="hintText"></span>
+                </div>
+                <div class="solution-box hidden" id="solutionBox">
+                    <strong>📖 Solution:</strong>
+                    <div id="solutionText"></div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state hidden" id="emptyState">
+                <h2>🎉 All Done!</h2>
+                <p>You've completed all questions in this category.</p>
+                <button class="btn btn-primary" id="restartBtn">Start Over</button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>💪 Keep practicing! Consistency beats intensity.</p>
+        </footer>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
